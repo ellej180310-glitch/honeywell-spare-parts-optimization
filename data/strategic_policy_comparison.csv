@@ -1,0 +1,6 @@
+strategy,business_goal,policy_id,safety_stock_units,reorder_quantity_units,annual_inventory_cost_usd,immediate_fill_rate_pct,cost_efficiency_score,availability_score
+Cost Priority,Minimize annual inventory cost,P031,20,10,155999.75,92.81,100.0,53.49959774738537
+Weighted 60/40,Give 60% weight to cost and 40% to availability,P051,30,10,162410.4,95.02,95.32103496095175,71.2791633145615
+Balanced,Maximize the average of both objective scores,P053,30,30,169580.61,95.9,90.0876870301438,78.35880933226069
+Equity,Minimize the gap between both objective scores,P063,35,30,177703.48,96.49,84.15901758995693,83.10539018503614
+Availability Priority,Maximize immediate part availability,P098,50,80,264149.82,98.59,21.064104809867885,100.0
