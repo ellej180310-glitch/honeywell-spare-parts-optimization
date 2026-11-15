@@ -1,0 +1,39 @@
+I am building a multi-objective optimization project for Honeywell Aerospace. The business problem is choosing inventory policies for a representative critical aerospace spare part while balancing two competing objectives:
+
+1. Minimize expected annual inventory cost.
+2. Maximize immediate part availability, measured as the percentage of demand filled immediately.
+
+I'll use every combination of these two decision variables to generate a synthetic CSV dataset containing exactly 100 inventory policies.
+
+- Safety-stock level: 5 to 50 units in increments of 5, producing 10 levels.
+- Reorder quantity: 10 to 100 units in increments of 10, producing 10 levels.
+
+I'll use the same business conditions for every policy so the results can be compared fairly:
+
+- Annual demand: 120 units
+- Demand variability coefficient: 0.75
+- Supplier lead time: 45 days
+- Part criticality: High
+- Unit cost: $12,000
+- Annual holding rate: 20%
+- Ordering cost: $1,500 per order
+- Stockout penalty: $6,000 per unavailable unit
+- Emergency-order premium: $2,000 per unavailable unit
+- Annual obsolescence rate: 3%
+- Storage requirement: 1.8 cubic feet per unit
+- Estimated downtime: 12 hours per unavailable unit
+
+The synthetic relationships should follow realistic inventory behavior:
+
+- Higher safety stock should increase availability with diminishing returns.
+- Higher safety stock should increase holding and obsolescence costs.
+- Larger reorder quantities should reduce annual order frequency.
+- Larger reorder quantities should increase average inventory, storage use, holding cost, and obsolescence risk.
+- Availability should improve slightly as reorder quantity increases, but safety stock should have the stronger effect.
+- Low-inventory policies should experience more stockouts, emergency orders, and downtime.
+- The dataset must contain both Pareto-efficient and dominated policies.
+- Add a small amount of reproducible variation using NumPy random seed 20261115.
+- Keep immediate fill rate between 0 and 100 percent.
+- Round financial results to two decimal places and operational measurements to reasonable precision.
+
+Each row should describe one inventory policy and report its safety stock, reorder quantity, reorder point, annual demand, lead time, cost assumptions, average inventory, annual orders, expected stockouts, individual cost categories, total annual inventory cost, immediate fill rate, storage use, and estimated downtime.
