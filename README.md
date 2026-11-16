@@ -1,5 +1,12 @@
 # AI-Driven Spare-Parts Inventory Optimization at Honeywell Aerospace
 
+
+**Student:** Christelle Jean  
+**Instructor:** Professor Alex Shaw  
+**Assignment:** Final Project Phase 1 – Build Your Optimization Engine  
+**Date:** November 15, 2026  
+
+
 ## Overview
 
 This project builds a multi-objective optimization engine for comparing aerospace spare-parts inventory policies. It tests how safety-stock levels and reorder quantities affect expected annual inventory cost and immediate part availability.
@@ -83,11 +90,11 @@ These strategies represent different business priorities. They are not final rec
 - `requirements.txt` — Required Python packages
 
 ## Technologies
-Python
-Pandas
-NumPy
-Matplotlib
-Jupyter Notebook
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Jupyter Notebook
 
 ## Running the Analysis
 
